@@ -5,7 +5,7 @@ package com.example.michael.kaijuhomework;
  */
 
 public abstract class Kaiju
-        implements Damagable, Attacker {
+        implements Damageable, Attacker {
 
     private String name;
     private int healthValue;
@@ -31,6 +31,10 @@ public abstract class Kaiju
 
     public void damage(int damageValue) {
         healthValue -= damageValue;
+    }
+
+    public void attack(Damageable target) {
+        target.damage(attackValue);
     }
 
     public abstract String roar();

@@ -11,10 +11,12 @@ import static org.junit.Assert.assertEquals;
 
 public class GodzillaTest {
     Godzilla godzilla;
+    Damageable target;
 
     @Before
     public void before() {
         godzilla = new Godzilla();
+        target = new BehemothTank();
     }
 
     @Test
@@ -41,5 +43,11 @@ public class GodzillaTest {
     public void canBeDamaged() {
         godzilla.damage(300);
         assertEquals(700, godzilla.getHealthValue());
+    }
+
+    @Test
+    public void canAttack() {
+        godzilla.attack(target);
+        assertEquals(1500, target.getHealthValue());
     }
 }

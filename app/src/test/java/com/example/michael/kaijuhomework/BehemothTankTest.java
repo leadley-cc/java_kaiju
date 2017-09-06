@@ -11,10 +11,12 @@ import static org.junit.Assert.assertEquals;
 
 public class BehemothTankTest {
     BehemothTank behemoth;
+    Damageable target;
 
     @Before
     public void before() {
         behemoth = new BehemothTank();
+        target = new Godzilla();
     }
 
     @Test
@@ -36,5 +38,11 @@ public class BehemothTankTest {
     public void canBeDamaged() {
         behemoth.damage(400);
         assertEquals(1600, behemoth.getHealthValue());
+    }
+
+    @Test
+    public void canAttack() {
+        behemoth.attack(target);
+        assertEquals(700, target.getHealthValue());
     }
 }

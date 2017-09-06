@@ -11,10 +11,12 @@ import static org.junit.Assert.assertEquals;
 
 public class RodanTest {
     Rodan rodan;
+    Damageable target;
 
     @Before
     public void before() {
         rodan = new Rodan();
+        target = new BehemothTank();
     }
 
     @Test
@@ -41,5 +43,11 @@ public class RodanTest {
     public void canBeDamaged() {
         rodan.damage(800);
         assertEquals(700, rodan.getHealthValue());
+    }
+
+    @Test
+    public void canAttack() {
+        rodan.attack(target);
+        assertEquals(1600, target.getHealthValue());
     }
 }

@@ -11,10 +11,12 @@ import static org.junit.Assert.assertEquals;
 
 public class MobileSAMTest {
     MobileSAM mobileSAM;
+    Damageable target;
 
     @Before
     public void before() {
         mobileSAM = new MobileSAM();
+        target = new Mothra();
     }
 
     @Test
@@ -36,5 +38,11 @@ public class MobileSAMTest {
     public void canBeDamaged() {
         mobileSAM.damage(100);
         assertEquals(200, mobileSAM.getHealthValue());
+    }
+
+    @Test
+    public void canAttack() {
+        mobileSAM.attack(target);
+        assertEquals(300, target.getHealthValue());
     }
 }

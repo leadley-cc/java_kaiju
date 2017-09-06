@@ -11,10 +11,12 @@ import static org.junit.Assert.assertEquals;
 
 public class MothraTest {
     Mothra mothra;
+    Damageable target;
 
     @Before
     public void before() {
         mothra = new Mothra();
+        target = new BehemothTank();
     }
 
     @Test
@@ -41,5 +43,11 @@ public class MothraTest {
     public void canBeDamaged() {
         mothra.damage(200);
         assertEquals(600, mothra.getHealthValue());
+    }
+
+    @Test
+    public void canAttack() {
+        mothra.attack(target);
+        assertEquals(1400, target.getHealthValue());
     }
 }

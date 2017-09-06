@@ -5,5 +5,7 @@ package com.example.michael.kaijuhomework;
  */
 
 public interface Attacker {
-//    void attack(Damagable target);
+    int getAttackValue();
+
+    void attack(Damageable target);
 }

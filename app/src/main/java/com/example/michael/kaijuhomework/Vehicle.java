@@ -5,7 +5,7 @@ package com.example.michael.kaijuhomework;
  */
 
 public abstract class Vehicle
-        implements Damagable, Attacker {
+        implements Damageable, Attacker {
 
     private String type;
     private int healthValue;
@@ -27,6 +27,10 @@ public abstract class Vehicle
 
     public int getAttackValue() {
         return attackValue;
+    }
+
+    public void attack(Damageable target) {
+        target.damage(attackValue);
     }
 
     public void damage(int damageValue) {

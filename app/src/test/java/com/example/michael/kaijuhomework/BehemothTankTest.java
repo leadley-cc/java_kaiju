@@ -51,4 +51,10 @@ public class BehemothTankTest {
         behemoth.attack(target);
         assertEquals(700, target.getHealthValue());
     }
+
+    @Test
+    public void canUltimateAttack() {
+        behemoth.ultimateAttack(target);
+        assertEquals(0, target.getHealthValue());
+    }
 }

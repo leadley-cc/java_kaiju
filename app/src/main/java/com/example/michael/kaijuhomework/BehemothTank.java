@@ -6,6 +6,6 @@ package com.example.michael.kaijuhomework;
 
 public class BehemothTank extends Vehicle {
     public BehemothTank() {
-        super("Behemoth Tank", 2000, 300);
+        super("Behemoth Tank", 2000, 300, 1000);
     }
 }

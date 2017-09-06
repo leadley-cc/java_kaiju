@@ -21,14 +21,17 @@ public abstract class Kaiju
         return name;
     }
 
+    @Override
     public int getHealthValue() {
         return healthValue;
     }
 
+    @Override
     public int getAttackValue() {
         return attackValue;
     }
 
+    @Override
     public void damage(int damageValue) {
         if (damageValue >= healthValue) {
             healthValue = 0;
@@ -37,6 +40,7 @@ public abstract class Kaiju
         }
     }
 
+    @Override
     public void attack(Damageable target) {
         target.damage(attackValue);
     }

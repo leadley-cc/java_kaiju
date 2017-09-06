@@ -6,6 +6,6 @@ package com.example.michael.kaijuhomework;
 
 public class MobileSAM extends Vehicle {
     public MobileSAM() {
-        super("MobileSAM", 300, 500);
+        super("MobileSAM", 300, 500, 1200);
     }
 }

@@ -16,7 +16,7 @@ public class MobileSAMTest {
     @Before
     public void before() {
         mobileSAM = new MobileSAM();
-        target = new Mothra();
+        target = new Rodan();
     }
 
     @Test
@@ -49,6 +49,12 @@ public class MobileSAMTest {
     @Test
     public void canAttack() {
         mobileSAM.attack(target);
+        assertEquals(1000, target.getHealthValue());
+    }
+
+    @Test
+    public void canUltimateAttack() {
+        mobileSAM.ultimateAttack(target);
         assertEquals(300, target.getHealthValue());
     }
 }

@@ -41,6 +41,12 @@ public class BehemothTankTest {
     }
 
     @Test
+    public void healthLowerBoundedAtZero() {
+        behemoth.damage(5000);
+        assertEquals(0, behemoth.getHealthValue());
+    }
+
+    @Test
     public void canAttack() {
         behemoth.attack(target);
         assertEquals(700, target.getHealthValue());

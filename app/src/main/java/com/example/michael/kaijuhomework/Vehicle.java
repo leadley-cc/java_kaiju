@@ -29,11 +29,15 @@ public abstract class Vehicle
         return attackValue;
     }
 
-    public void attack(Damageable target) {
-        target.damage(attackValue);
+    public void damage(int damageValue) {
+        if (damageValue >= healthValue) {
+            healthValue = 0;
+        } else {
+            healthValue -= damageValue;
+        }
     }
 
-    public void damage(int damageValue) {
-        healthValue -= damageValue;
+    public void attack(Damageable target) {
+        target.damage(attackValue);
     }
 }

@@ -46,6 +46,12 @@ public class RodanTest {
     }
 
     @Test
+    public void healthLowerBoundedAtZero() {
+        rodan.damage(5000);
+        assertEquals(0, rodan.getHealthValue());
+    }
+
+    @Test
     public void canAttack() {
         rodan.attack(target);
         assertEquals(1600, target.getHealthValue());

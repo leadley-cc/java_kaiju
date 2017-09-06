@@ -41,6 +41,12 @@ public class MobileSAMTest {
     }
 
     @Test
+    public void healthLowerBoundedAtZero() {
+        mobileSAM.damage(5000);
+        assertEquals(0, mobileSAM.getHealthValue());
+    }
+
+    @Test
     public void canAttack() {
         mobileSAM.attack(target);
         assertEquals(300, target.getHealthValue());

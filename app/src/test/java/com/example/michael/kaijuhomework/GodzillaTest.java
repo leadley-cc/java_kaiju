@@ -46,6 +46,12 @@ public class GodzillaTest {
     }
 
     @Test
+    public void healthLowerBoundedAtZero() {
+        godzilla.damage(5000);
+        assertEquals(0, godzilla.getHealthValue());
+    }
+
+    @Test
     public void canAttack() {
         godzilla.attack(target);
         assertEquals(1500, target.getHealthValue());

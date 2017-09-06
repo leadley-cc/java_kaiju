@@ -30,7 +30,11 @@ public abstract class Kaiju
     }
 
     public void damage(int damageValue) {
-        healthValue -= damageValue;
+        if (damageValue >= healthValue) {
+            healthValue = 0;
+        } else {
+            healthValue -= damageValue;
+        }
     }
 
     public void attack(Damageable target) {

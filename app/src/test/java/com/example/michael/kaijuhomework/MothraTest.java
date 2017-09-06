@@ -46,6 +46,12 @@ public class MothraTest {
     }
 
     @Test
+    public void healthLowerBoundedAtZero() {
+        mothra.damage(5000);
+        assertEquals(0, mothra.getHealthValue());
+    }
+
+    @Test
     public void canAttack() {
         mothra.attack(target);
         assertEquals(1400, target.getHealthValue());

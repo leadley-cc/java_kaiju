@@ -56,4 +56,9 @@ public class MothraTest {
         mothra.attack(target);
         assertEquals(1400, target.getHealthValue());
     }
+
+    @Test
+    public void canFly() {
+        assertEquals("Flap! Flap!", mothra.fly());
+    }
 }

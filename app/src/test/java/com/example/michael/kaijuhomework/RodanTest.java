@@ -56,4 +56,9 @@ public class RodanTest {
         rodan.attack(target);
         assertEquals(1600, target.getHealthValue());
     }
+
+    @Test
+    public void canFly() {
+        assertEquals("Flap! Flap!", rodan.fly());
+    }
 }

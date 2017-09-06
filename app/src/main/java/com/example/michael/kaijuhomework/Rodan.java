@@ -13,4 +13,8 @@ public class Rodan extends Kaiju {
     public String roar() {
         return "Graaaaaagh!";
     }
+
+    public String fly() {
+        return "Flap! Flap!";
+    }
 }

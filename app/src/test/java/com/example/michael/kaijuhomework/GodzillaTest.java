@@ -56,4 +56,9 @@ public class GodzillaTest {
         godzilla.attack(target);
         assertEquals(1500, target.getHealthValue());
     }
+
+    @Test
+    public void canMove() {
+        assertEquals("Stomp! Stomp!", godzilla.move());
+    }
 }

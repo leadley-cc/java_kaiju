@@ -13,4 +13,8 @@ public class Mothra extends Kaiju {
     public String roar() {
         return "Gwoooooosh!";
     }
+
+    public String fly() {
+        return "Flap! Flap!";
+    }
 }

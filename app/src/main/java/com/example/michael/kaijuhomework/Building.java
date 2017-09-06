@@ -28,8 +28,10 @@ public class Building
     public void damage(int damageValue) {
         if (damageValue >= healthValue) {
             healthValue = 0;
+            System.out.println(getName() + " is completely destroyed!");
         } else {
             healthValue -= damageValue;
+            System.out.println(getName() + " is now on " + getHealthValue() + " health.");
         }
     }
 }

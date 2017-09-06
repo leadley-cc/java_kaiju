@@ -42,18 +42,23 @@ public abstract class Vehicle
     public void damage(int damageValue) {
         if (damageValue >= healthValue) {
             healthValue = 0;
+            System.out.println(getType() + " is completely destroyed!");
         } else {
             healthValue -= damageValue;
+            System.out.println(getType() + " is now on " + getHealthValue() + " health.");
         }
     }
 
     @Override
     public void attack(Damageable target) {
+        System.out.println(getType() + " attacks for " + getAttackValue() + " damage!");
         target.damage(attackValue);
     }
 
     @Override
     public void ultimateAttack(Damageable target) {
+        System.out.println(getType() + " unleashes its ultimate attack for " +
+                           getUltimateAttackValue() + " damage!");
         target.damage(ultimateAttackValue);
     }
 }

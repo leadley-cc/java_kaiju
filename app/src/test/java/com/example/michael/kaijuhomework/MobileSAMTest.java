@@ -21,7 +21,7 @@ public class MobileSAMTest {
 
     @Test
     public void hasType() {
-        assertEquals("MobileSAM", mobileSAM.getType());
+        assertEquals("Mobile SAM", mobileSAM.getType());
     }
 
     @Test
@@ -31,7 +31,7 @@ public class MobileSAMTest {
 
     @Test
     public void hasAttackValue() {
-        assertEquals(500, mobileSAM.getAttackValue());
+        assertEquals(400, mobileSAM.getAttackValue());
     }
 
     @Test
@@ -49,7 +49,7 @@ public class MobileSAMTest {
     @Test
     public void canAttack() {
         mobileSAM.attack(target);
-        assertEquals(1000, target.getHealthValue());
+        assertEquals(1100, target.getHealthValue());
     }
 
     @Test

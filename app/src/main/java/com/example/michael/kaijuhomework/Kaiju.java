@@ -35,13 +35,16 @@ public abstract class Kaiju
     public void damage(int damageValue) {
         if (damageValue >= healthValue) {
             healthValue = 0;
+            System.out.println(getName() + " is completely destroyed!");
         } else {
             healthValue -= damageValue;
+            System.out.println(getName() + " is now on " + getHealthValue() + " health.");
         }
     }
 
     @Override
     public void attack(Damageable target) {
+        System.out.println(getName() + " attacks for " + getAttackValue() + " damage!");
         target.damage(attackValue);
     }
 

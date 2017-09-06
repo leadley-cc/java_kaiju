@@ -36,4 +36,10 @@ public class GodzillaTest {
     public void testRoar() {
         assertEquals("Skreeeonk!", godzilla.roar());
     }
+
+    @Test
+    public void canBeDamaged() {
+        godzilla.damage(300);
+        assertEquals(700, godzilla.getHealthValue());
+    }
 }

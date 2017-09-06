@@ -36,4 +36,10 @@ public class MothraTest {
     public void testRoar() {
         assertEquals("Gwoooooosh!", mothra.roar());
     }
+
+    @Test
+    public void canBeDamaged() {
+        mothra.damage(200);
+        assertEquals(600, mothra.getHealthValue());
+    }
 }

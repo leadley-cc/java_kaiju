@@ -32,4 +32,9 @@ public class BehemothTankTest {
         assertEquals(300, behemoth.getAttackValue());
     }
 
+    @Test
+    public void canBeDamaged() {
+        behemoth.damage(400);
+        assertEquals(1600, behemoth.getHealthValue());
+    }
 }

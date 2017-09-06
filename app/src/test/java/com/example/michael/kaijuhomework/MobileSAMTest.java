@@ -32,4 +32,9 @@ public class MobileSAMTest {
         assertEquals(500, mobileSAM.getAttackValue());
     }
 
+    @Test
+    public void canBeDamaged() {
+        mobileSAM.damage(100);
+        assertEquals(200, mobileSAM.getHealthValue());
+    }
 }

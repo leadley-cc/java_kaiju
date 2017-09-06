@@ -36,4 +36,10 @@ public class RodanTest {
     public void testRoar() {
         assertEquals("Graaaaaagh!", rodan.roar());
     }
+
+    @Test
+    public void canBeDamaged() {
+        rodan.damage(800);
+        assertEquals(700, rodan.getHealthValue());
+    }
 }

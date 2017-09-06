@@ -8,4 +8,8 @@ public interface UltimateAttacker {
     int getUltimateAttackValue();
 
     void ultimateAttack(Damageable target);
+
+    int getCooldownCounter();
+
+    void cooldownTick();
 }

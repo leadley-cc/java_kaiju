@@ -11,12 +11,14 @@ public abstract class Vehicle
     private int healthValue;
     private int attackValue;
     private int ultimateAttackValue;
+    private int cooldownCounter;
 
     public Vehicle(String type, int healthValue, int attackValue, int ultimateAttackValue) {
         this.type = type;
         this.healthValue = healthValue;
         this.attackValue = attackValue;
         this.ultimateAttackValue = ultimateAttackValue;
+        this.cooldownCounter = 0;
     }
 
     public String getType() {
@@ -36,6 +38,11 @@ public abstract class Vehicle
     @Override
     public int getUltimateAttackValue() {
         return ultimateAttackValue;
+    }
+
+    @Override
+    public int getCooldownCounter() {
+        return cooldownCounter;
     }
 
     @Override
@@ -60,5 +67,12 @@ public abstract class Vehicle
         System.out.println(getType() + " unleashes its ultimate attack for " +
                            getUltimateAttackValue() + " damage!");
         target.damage(ultimateAttackValue);
+        cooldownCounter = 1;
+    }
+
+    @Override
+    public void cooldownTick() {
+        System.out.println(getType() + " needs to recharge this turn.");
+        cooldownCounter--;
     }
 }
